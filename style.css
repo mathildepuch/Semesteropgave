@@ -4,8 +4,7 @@
     --secondary-color: #E6DDCA;
     --tertiary-color:  #000000;
     --quarternary-color: #AAC1C7;
-    --font-set: Magilio;
-    
+    --font-set: Magilio;  
 }
 
 body{
@@ -16,22 +15,155 @@ body{
     padding: 0;
 }
 
-.navigation{
+.navigation ul {
+    width: 400%;
     background-color: transparent;
-    width: 300%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
-    top: 0;
+    position: absolute; /* den her position og z-index gør at billedet kommer under navbaren*/
+    z-index: 5;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+ }
+ 
+ .navigation li {
+    display:inline;
+ }
+ 
+ .navigation li a {
+    padding:70px 10px;
+    display: inline-block;
+    color: var(--tertiary-color);
+    text-align: center;
+    font-size: 50px;
+    
+ }
+ /* her bruges der hero img, så nav baren kan komme ovenpå billedet*/
+ .hero_img{
+    height: 50%;
+    width: 400%;
+  /* det her gør at billedet er centreret til alle devices  */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-.nav-ul{
-    list-style: none;
-    display: flex;
+
+   
+.ommig_gridcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* to kolonner, en til text og en til billede*/
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+}
+.profilbillede_grid{
+    display: grid; /* vælger grid så det kommer i kolonner og med en række*/
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
     justify-content: center;
+    margin-left: -10%;
+}
+.profilbillede{ /* selve profilbilledets størrelse og placering*/
+    width: 90%;
+    height: 90%;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    justify-content:center;
+    
+
+}
+.ommig_grid{ /* kolonnen med text og overskrift*/
+    width: 400%;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.ommig_overskrift{
+    width: 400%;
+    font-size: 60px;
+    margin-left: -90px;
+    font-family: magilio;
+}
+
+.ommig_text{
+    width: 250%;
+    font-size: 250%;
+    text-align: center;
+    font-family: helvetica;
+    margin-left: -30%;
+    margin-top: -5%;
+    
+}
+   
+
+.CV{
+    width: 200%;
+    margin-top: 100px;
+    margin-left: -20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;  
+}
+.projekt_overskrift{
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+    font-family: magilio;
+    
+}
+.grønvilje_img{
+    width: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 70px;
+  
+}
+.grønvilje_overskrift{
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+    font-family: magilio;
+   
+   
+}
+
+.grønvilje_text{
+    text-align: center;
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -30px;
+
     
 }
 
 
+ .projekter{
+     background-color: var(--secondary-color);
+     width: 400%;
+
+ }
+
+ 
+ .hhtd{
+    width: 100%;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+ }
+ .folkehop_img {
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+ }
