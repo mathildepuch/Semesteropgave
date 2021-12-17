@@ -5,6 +5,11 @@
     --tertiary-color:  #000000;
     --quarternary-color: #AAC1C7;
     --font-set: Magilio;  
+    overflow-x: hidden;
+}
+
+html{ /* så den scroller ned til der hvor man trykker i nav*/
+    scroll-behavior: smooth;
 }
 
 body{
@@ -15,8 +20,9 @@ body{
     padding: 0;
 }
 
+/* min nav bar i toppen*/
 .navigation ul {
-    width: 400%;
+    width: 100%;
     background-color: transparent;
     position: absolute; /* den her position og z-index gør at billedet kommer under navbaren*/
     z-index: 5;
@@ -31,17 +37,18 @@ body{
  }
  
  .navigation li a {
-    padding:70px 10px;
+    padding: 2px 10px;
     display: inline-block;
     color: var(--tertiary-color);
     text-align: center;
-    font-size: 50px;
+    font-size: 15px;
     
  }
+
  /* her bruges der hero img, så nav baren kan komme ovenpå billedet*/
  .hero_img{
     height: 50%;
-    width: 400%;
+    width: 100%;
   /* det her gør at billedet er centreret til alle devices  */
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +56,7 @@ body{
   position: relative;
 }
 
-   
+  /* grid container til mit billede og test om mig*/ 
 .ommig_gridcontainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* to kolonner, en til text og en til billede*/
@@ -57,113 +64,765 @@ body{
     grid-column-gap: 1px;
     grid-row-gap: 0px;
 }
+
 .profilbillede_grid{
+    width: 100%;
     display: grid; /* vælger grid så det kommer i kolonner og med en række*/
     grid-column: 1;
     grid-row: 1;
     align-self: center;
     justify-content: center;
-    margin-left: -10%;
 }
-.profilbillede{ /* selve profilbilledets størrelse og placering*/
-    width: 90%;
-    height: 90%;
+
+.profilbillede{
+     /* selve profilbilledets størrelse og placering*/
+    width: 100%;
     display: grid;
     justify-self: center;
     align-self: center;
-    justify-content:center;
-    
-
+    justify-content:center;  
 }
+
 .ommig_grid{ /* kolonnen med text og overskrift*/
-    width: 400%;
+    width: 100%;
     grid-column: 2;
     grid-row: 1;
-
 }
 
 .ommig_overskrift{
-    width: 400%;
-    font-size: 60px;
-    margin-left: -90px;
+    width: 100%;
+    font-size: 25px;
     font-family: magilio;
 }
 
 .ommig_text{
-    width: 250%;
-    font-size: 250%;
+    width: 80%;
+    font-size: 62%;
     text-align: center;
     font-family: helvetica;
-    margin-left: -30%;
     margin-top: -5%;
-    
 }
    
 
 .CV{
-    width: 200%;
-    margin-top: 100px;
-    margin-left: -20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 15px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;  
+    margin-left: 13px;
 }
-.projekt_overskrift{
+/*projekter*/
+.projekter{
+    background-color: var(--secondary-color);
     width: 100%;
-    font-size: 60px;
-    text-align: center;
-    font-family: magilio;
-    
 }
+
+.projekt_overskrift{
+    padding-top: 2rem;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: magilio; 
+}
+
 .grønvilje_img{
     width: 90%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-left: 70px;
-  
+    margin-left: 20px; 
 }
+
 .grønvilje_overskrift{
     width: 100%;
-    font-size: 60px;
+    font-size: 20px;
     text-align: center;
     font-family: magilio;
-   
-   
+}
+
+/*knap til at komme ind på hjemmesiden*/
+.center-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .grønvilje_text{
     text-align: center;
-    font-size: 55px;
+    font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: -30px;
+    padding-left: 27px;
+    margin-right: 27px; 
+}
 
-    
+.groenvilje_knap{
+  background-color:var(--secondary-color);
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 0 auto 2rem auto;
 }
 
 
- .projekter{
-     background-color: var(--secondary-color);
-     width: 400%;
+.HTTD_img{
+    width: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 20px;
+}
 
- }
+.HTTD_overskrift{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-family: magilio; 
+}
 
+.HTTD_text{
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 27px;
+    margin-right: 27px; 
+}
+
+.center-btn2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.HTTD_knap{
+    background-color:var(--secondary-color);
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 auto 2rem auto;
+}
  
- .hhtd{
+.folkehop_img{
+    width: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 20px;
+}
+
+.folkehop_overskrift{
     width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-family: magilio; 
+}
+
+.folkehop_text{
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 27px;
+    margin-right: 27px; 
+}
+
+.center-btn3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.folkehop_knap{
+    background-color:var(--secondary-color);
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 auto 2rem auto;
+}
+
+/* web design sektion*/
+.Web_design {
+    width: 100%;
+}
+
+.overskrift_web{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: magilio;
+    margin-bottom: -15px;
    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; 
- }
- .folkehop_img {
+}
+
+.overskrift_waw{
     width: 100%;
-    
+    font-size: 20px;
+    text-align: center;
+    font-family: magilio;
+
+}
+
+.waw_png{
+    width: 90%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; 
- }
+    position: relative;
+    margin-left: 20px;
+}
+
+.waw_text{
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 27px;
+    margin-right: 27px; 
+}
+
+.center-btn4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.waw_knap{
+    background-color:var(--primary-color);
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 auto 2rem auto;
+}
+/*sociale medier sektion*/
+.some{
+    background-color:var(--secondary-color)
+}
+
+.some_iphone{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+.some_overskrift{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-family: magilio;
+
+}
+
+.some_text{
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 27px;
+    margin-right: 27px; 
+}
+
+.some_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* to kolonner, en til text og en til billede*/
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+}
+
+.some_insta{
+    width: 10%;
+    size: 20%;
+    display: grid;
+    margin-left: 130px;
+    margin-top: 7px;  
+}
+
+.waw_insta{
+    text-align: center;
+    font-size: 10px;
+    font-family: magilio;
+    padding-left: 27px;
+    margin-right: 130px; 
+    margin-bottom: 60px;
+} 
+/* grafiske billeder (skal sættes i grid, til web*/
+
+.orange_img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 1rem; /* giver den 1rem for at der kommer noget luft mellem billederne*/
+}
+
+.kind_img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sky_img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.grafisk{
+    padding-top: 1rem;
+    background-color:var(--primary-color)
+}
+
+.grafisk_overskrift{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-family: magilio;
+    padding-bottom: 2rem;
+}
+
+.grafisk_text{
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 27px;
+    margin-right: 27px;  
+    padding-bottom: 2rem;
+}
+
+/*footer*/
+
+.footer{
+    background-color:var(--secondary-color);
+    padding: 5px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.kontakt{
+    text-align: center;
+    font-size: 15px;
+}
+
+.mail{ 
+    margin-left: 10px;
+    font-size: 10px;
+    text-align: center; 
+}
+
+.mobil{
+    margin-left: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.sociale_medier{
+    display: flex;
+    padding: 1rem 9rem;
+    text-align: center;  
+}
+
+.instagram{
+    width: 50%;  
+}
+
+.pinterest{
+    width: 50%;    
+}
+
+.linkedin{
+    width: 50%;  
+}
+/* med queries*/
+
+@media screen and (min-width: 557px) {
+    .nav-ul{
+        font-size: 20px;
+        
+    }
+    .ommig_overskrift{
+        margin-left: -20px;
+    }
+
+    .ommig_text{
+        font-size: 15px;
+    }
+
+    .grønvilje_text{
+    font-size: 18px;
+    }
+    
+    .HTTD_text{
+    font-size: 18px;
+    }
+
+    .Folkehop_text{
+        font-size: 18px;
+    }
+
+    .waw_text{
+        font-size: 18px;
+    }
+
+   .some_text{
+       font-size: 18px;
+   }
+
+   .some_insta{
+    width: 15%;
+    margin-left: 160px;
+    margin-top: 15px;
+}
+    .waw_insta{
+
+    font-size: 20px;
+    margin-right: 170px; 
+    }
+
+    .grafisk_text{
+    font-size: 18px;
+    }
+
+    .kontakt{
+    font-size: 18px;
+    }
+
+    .mail{
+    font-size: 18px;
+    }
+
+    .mobil{
+    font-size: 18px;
+    }
+
+    .groenvilje_knap{
+    border: 2px solid var(--tertiary-color);
+    font-size: 15px;
+      
+    }
+    .HTTD_knap{
+    border: 2px solid var(--tertiary-color);
+    font-size: 15px;
+    }
+
+    .folkehop_knap{
+    border: 2px solid var(--tertiary-color);
+    font-size: 15px;
+    }
+
+    .waw_knap{
+    border: 2px solid var(--tertiary-color);
+    font-size: 15px;
+    }
+    /* ny særm størrelse*/
+
+@media screen and (min-width: 750px) {
+    .ommig_overskrift{
+    margin-left: -5px;
+    font-size: 28px;
+    }
+
+    .projekt_overskrift{
+    font-size: 35px;
+    }
+
+    .ommig_text{
+    margin-left: 10px;
+    font-size: 20px;
+    }
+
+    .nav li a{
+    font-size: 20px;
+    }
+
+    .grønvilje_overskrift{
+    font-size: 30px;
+    }
+
+    .grønvilje_text{
+    font-size: 23px;
+    }
+
+    .HTTD_overskrift{
+    font-size: 30px;
+    }
+
+    .HTTD_text{
+    font-size: 23px;
+    }
+        
+    .folkehop_overskrift{
+    font-size: 30px;
+    }
+
+    .Folkehop_text{
+    font-size: 23px;
+    }
+
+    .waw_text{
+    font-size: 23px;
+    }
+
+    .some_text{
+    font-size: 23px;
+    }
+
+    .some_insta{
+    width: 15%;
+    margin-left: 160px;
+    margin-top: 15px;
+    }
+
+    .overskrift_web{
+    font-size: 35px;
+    }
+
+    .overskrift_waw{
+    font-size: 25px;
+    }
+
+    .waw_insta{
+    font-size: 20px;
+    margin-right: 170px; 
+    }
+
+    .grafisk_text{
+    font-size: 23px;
+    }
+
+    .kontakt{
+    font-size: 25px;
+    }
+    .mail{
+    font-size: 23px;
+    }
+
+    .mobil{
+    font-size: 23px;
+    }
+
+    .groenvilje_knap{
+    border: 3px solid var(--tertiary-color);
+    font-size: 20px;
+    }
+    
+    .HTTD_knap{
+    border: 3px solid var(--tertiary-color);
+    font-size: 20px;
+    }
+    
+    .folkehop_knap{
+    border: 3px solid var(--tertiary-color);
+    font-size: 20px;
+    }
+    
+    .waw_knap{
+    border: 3px solid var(--tertiary-color);
+    font-size: 20px;
+    }
+    /* ny skræm*/
+    @media screen and (min-width: 1100px) {
+        .ommig_overskrift{
+        margin-left: 65px;
+        font-size: 40px;
+        }
+       
+        .navigation li a {
+            padding: 2px 10px;
+            display: inline-block;
+            color: var(--tertiary-color);
+            text-align: center;
+            font-size: 35px;
+            margin-top: 20px;
+        }
+        .projekt_overskrift{
+            font-size: 35px;
+        }
+        .ommig_text{
+            margin-left: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .profilbillede{
+        width: 60%;
+        margin-bottom: 100px;
+    }
+    .CV{
+        width: 70%;
+        margin-left: 230px;
+    }
+       
+       
+        .projekt_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+       .projekt_overskrift{
+       font-size: 50px;
+       margin-bottom: 70px;
+       }
+       .grønvilje_img {
+           margin-bottom: 70px;
+           margin-left: 3rem;
+       }
+       .grønvilje_overskrift{
+           font-size: 30px;
+       }
+       .HTTD_overskrift{
+           font-size: 30px;
+       }
+       .folkehop_overskrift{
+           font-size: 30px;
+       }
+       .Folkehop_text{
+           font-size: 20px;
+       }
+       .HTTD_text{
+           font-size: 20px;
+       }
+       .grønvilje_text{
+           font-size: 20px;
+       }
+       .HTTD_img{
+           margin-bottom: 100px;
+       }
+       .folkehop_img{
+        margin-left: 3rem;
+       }
+       .overskrift_web{
+        font-size: 30px;
+    }
+    .overskrift_waw{
+        font-size: 20px;
+    }
+    .waw_png{
+        width: 60%;
+        margin-left: 280px;
+    }
+    .waw_text{
+        font-size: 20px;
+    }
+    
+    .some_iphone{
+        width: 60%;
+        margin-left: 100px;
+    }
+    .some_container{
+       
+         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+            }
+    }
+    .some_h2{
+        font-size: 30px;
+        padding-top: 80px;
+       margin-left: 250px;
+
+    }
+    .some_text{
+        font-size: 25px;
+        text-align: center;
+        
+    }
+    .some_insta{
+    width: 10%;
+    size: 10%;
+    display: grid;
+    margin-left: 500px;
+    margin-top: 7px;
+
+    }
+    .waw_insta{
+        font-size: 30px;
+        margin-right: 500px;    
+    }
+    .billede_grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 25px;
+        padding-right: 30px;
+    }
+    .footer{
+        padding: 5px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+    }
+    .kontakt{
+        text-align: center;
+        font-size: 25px;
+    }
+    .mail{
+        
+        margin-left: 10px;
+        font-size: 20px;
+        text-align: center;
+        
+    }
+    .mobil{
+        margin-left: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .sociale_medier{
+        display: flex;
+        padding: 1rem 30rem;
+        text-align: center;
+    }
+    
+    .instagram{
+        width: 20%;  
+    
+    }
+    
+    .pinterest{
+        width: 20%;
+        
+       
+        
+    }
+    .linkedin{
+        width: 20%;
+
+
+
+
+
+
+
+    }
+
