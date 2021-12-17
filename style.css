@@ -13,7 +13,7 @@ html{ /* så den scroller ned til der hvor man trykker i nav*/
 }
 
 body{
-    
+    overflow-x: hidden;
     margin: 0;
     background-color: var(--primary-color);
     font-family: var(--font-set);
@@ -419,7 +419,7 @@ body{
 
 /*footer*/
 
-.footer{
+footer{
     background-color:var(--secondary-color);
     padding: 5px;
     padding-bottom: 30px;
@@ -772,12 +772,11 @@ body{
         .some_h2{
         font-size: 30px;
         padding-top: 80px;
-        margin-left: 190px;
+        
         }
 
         .some_text{
         font-size: 20px;
-        margin-right: 120px;
         }
 
         .some_insta{
